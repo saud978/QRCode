@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-rG-8Tb">
+                                <rect key="frame" x="65.5" y="617" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Vz4-49-LZR"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.75294117647058822" green="0.22352941176470587" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeImageViewScaleWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="ni0-0w-dkm"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOA-Dz-hst">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2X-Rw-K91">
+                                <rect key="frame" x="239" y="66" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="I8U-Ud-3H8"/>
+                                    <constraint firstAttribute="height" constant="30" id="wbR-FJ-xH8"/>
+                                </constraints>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performButtonActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MiY-8k-lzl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-zr-WpA">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1gs-NH-myH"/>
+                                    <constraint firstAttribute="width" constant="240" id="a6r-65-hZ3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IOA-Dz-hst" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="NPj-DC-HS1"/>
+                            <constraint firstItem="IOA-Dz-hst" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qhq-bb-5v9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YPx-rG-8Tb" secondAttribute="bottom" constant="20" id="RKH-mW-UZ8"/>
+                            <constraint firstItem="YPx-rG-8Tb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SDW-Vv-ae5"/>
+                            <constraint firstItem="t2X-Rw-K91" firstAttribute="top" secondItem="IOA-Dz-hst" secondAttribute="bottom" constant="8" id="a27-Qy-hFS"/>
+                            <constraint firstItem="J3o-zr-WpA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a3Q-dp-Tel"/>
+                            <constraint firstItem="t2X-Rw-K91" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ih9-as-e8U"/>
+                            <constraint firstItem="IOA-Dz-hst" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ped-mq-Zmj"/>
+                            <constraint firstItem="J3o-zr-WpA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vwX-xZ-wVa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAction" destination="t2X-Rw-K91" id="d8B-or-PbU"/>
+                        <outlet property="imgQRCode" destination="J3o-zr-WpA" id="LVx-kX-hZO"/>
+                        <outlet property="slider" destination="YPx-rG-8Tb" id="IUj-Ru-oTh"/>
+                        <outlet property="textField" destination="IOA-Dz-hst" id="391-cF-aHG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
